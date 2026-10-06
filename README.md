@@ -29,15 +29,20 @@ You are given a routine that generates synthetic data: a random `X`, a known gro
 
 ## Configurations to Test
 
-The executable accepts an optional solver selector after the existing seed
-and noise arguments. It defaults to Gaussian elimination:
+The executable accepts an optional solver selector immediately after `N p`
+or after the optional seed and noise arguments. It defaults to Gaussian
+elimination:
 
 ```text
+./linreg N p [gaussian|gauss_jordan] [seed] [noise_std]
 ./linreg N p [seed] [noise_std] [gaussian|gauss_jordan]
 ```
 
-For example, `./linreg 20000 50 42 0.5 gauss_jordan` selects the
-Gauss-Jordan solver. The program reports the elapsed time for computing `XᵀX`,
+For example, `./linreg 20000 50 gauss_jordan` and
+`./linreg 20000 50 42 0.5 gauss_jordan` both select the Gauss-Jordan solver.
+Submit `benchmark_gcc.sh`, `benchmark_icc.sh`, and `benchmark_icx.sh` as
+separate Slurm jobs. Each runs one compiler and uses its own build and results
+directories. The program reports the elapsed time for computing `XᵀX`,
 computing `Xᵀy`, solving the system, and all compute kernels combined.
 
 You must run and report results for the following three `(N, p)` configurations, chosen to stress the two kernels differently:

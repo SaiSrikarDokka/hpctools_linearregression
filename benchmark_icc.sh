@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --job-name=linreg-bench
-#SBATCH --output=benchmark.out
-#SBATCH --error=benchmark_%j.err
-#SBATCH --time=08:00:00
+#SBATCH --job-name=linreg-icc
+#SBATCH --output=benchmark_icc_%j.out
+#SBATCH --error=benchmark_icc_%j.err
+#SBATCH --time=4:00:00
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16G
 
@@ -18,13 +18,13 @@ RUNS=3
 
 SOURCES="linreg.c gemm.c gemv.c gaussian.c gauss_jordan.c rng.c"
 
-BUILD_DIR="benchmark_build"
+BUILD_DIR="benchmark_build_icc"
 RESULTS_DIR="benchmark_results"
 
 mkdir -p "$BUILD_DIR"
 mkdir -p "$RESULTS_DIR"
 
-SUMMARY="${RESULTS_DIR}/summary.csv"
+SUMMARY="${RESULTS_DIR}/icc_summary.csv"
 
 echo "compiler,optimization,solver,N,p,average_ms,min_ms,max_ms" > "$SUMMARY"
 
@@ -121,7 +121,6 @@ benchmark()
 
                 echo -n "  Run $RUN/$RUNS ... "
 
-
                 OUTPUT=$(
                     "$BINARY" "$N" "$P" 42 "$SOLVER"
                 )
@@ -152,7 +151,6 @@ benchmark()
 
 
                 TIMES+=("$TIME_MS")
-
 
                 echo "${TIME_MS} ms"
 
@@ -190,7 +188,6 @@ benchmark()
             echo
             echo "  Runs: $RUNS"
 
-
             printf "  Times: ["
 
             for ((i=0; i<${#TIMES[@]}; i++))
@@ -205,7 +202,6 @@ benchmark()
             done
 
             echo "]"
-
 
             echo "  Average: ${AVERAGE} ms"
             echo "  Min:     ${MIN} ms"
@@ -229,39 +225,7 @@ benchmark()
 
 
 # ============================================================
-# GCC 12.3.0
-# ============================================================
-
-module purge
-
-module load cesga/2020
-module load gcc/12.3.0
-
-
-echo
-echo "============================================================"
-echo "GCC environment"
-echo "============================================================"
-
-gcc --version | head -1
-
-
-# GCC O0
-benchmark gcc gcc -O0 ""
-
-# GCC O2
-benchmark gcc gcc -O2 "-march=native"
-
-# GCC O3
-benchmark gcc gcc -O3 "-march=native"
-
-# GCC Ofast
-benchmark gcc gcc -Ofast "-march=native"
-
-
-
-# ============================================================
-# Intel ICC 2021.3.0 and ICX 2021.3.0
+# Intel ICC 2021.3.0
 # ============================================================
 
 module purge
@@ -272,43 +236,38 @@ module load intel
 
 echo
 echo "============================================================"
-echo "Intel environment"
+echo "Intel ICC environment"
 echo "============================================================"
 
-echo "ICC:"
 icc --version | head -1
-
-echo "ICX:"
-icx --version | head -1
-
 
 
 # ============================================================
-# ICC 2021.3.0
+# ICC -O0
 # ============================================================
 
 benchmark icc icc -O0 ""
 
+
+# ============================================================
+# ICC -O2
+# ============================================================
+
 benchmark icc icc -O2 "-march=native"
+
+
+# ============================================================
+# ICC -O3
+# ============================================================
 
 benchmark icc icc -O3 "-march=native"
 
+
+# ============================================================
+# ICC -Ofast
+# ============================================================
+
 benchmark icc icc -Ofast "-march=native"
-
-
-
-# ============================================================
-# ICX 2021.3.0
-# ============================================================
-
-benchmark icx icx -O0 ""
-
-benchmark icx icx -O2 "-march=native"
-
-benchmark icx icx -O3 "-march=native"
-
-benchmark icx icx -Ofast "-march=native"
-
 
 
 # ============================================================
