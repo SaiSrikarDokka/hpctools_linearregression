@@ -1,0 +1,470 @@
+slurmstepd: info: Setting TMPDIR to /scratch/10373477. Previous errors about TMPDIR can be discarded
+
+============================================================
+GCC environment
+============================================================
+gcc (GCC) 12.3.0
+
+############################################################
+# Compiler       : gcc
+# Optimization   : -O0
+# Extra flags    : 
+############################################################
+
+Building: benchmark_build/linreg_gcc_O0
+Build successful.
+
+============================================================
+Compiler       : gcc
+Optimization   : -O0
+Solver         : gaussian
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 476 ms
+  Run 2/5 ... 481 ms
+  Run 3/5 ... 479 ms
+  Run 4/5 ... 473 ms
+  Run 5/5 ... 478 ms
+
+  Runs: 5
+  Times: [476, 481, 479, 473, 478]
+  Average: 477.40 ms
+  Min:     473 ms
+  Max:     481 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O0
+Solver         : gauss_jordan
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 477 ms
+  Run 2/5 ... 476 ms
+  Run 3/5 ... 479 ms
+  Run 4/5 ... 474 ms
+  Run 5/5 ... 478 ms
+
+  Runs: 5
+  Times: [477, 476, 479, 474, 478]
+  Average: 476.80 ms
+  Min:     474 ms
+  Max:     479 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O0
+Solver         : gaussian
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 92303 ms
+  Run 2/5 ... 91981 ms
+  Run 3/5 ... 93130 ms
+  Run 4/5 ... 90883 ms
+  Run 5/5 ... 87703 ms
+
+  Runs: 5
+  Times: [92303, 91981, 93130, 90883, 87703]
+  Average: 91200.00 ms
+  Min:     87703 ms
+  Max:     93130 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O0
+Solver         : gauss_jordan
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 98994 ms
+  Run 2/5 ... 94749 ms
+  Run 3/5 ... 99376 ms
+  Run 4/5 ... 96661 ms
+  Run 5/5 ... 108371 ms
+
+  Runs: 5
+  Times: [98994, 94749, 99376, 96661, 108371]
+  Average: 99630.20 ms
+  Min:     94749 ms
+  Max:     108371 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O0
+Solver         : gaussian
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 68930 ms
+  Run 2/5 ... 69232 ms
+  Run 3/5 ... 68859 ms
+  Run 4/5 ... 68935 ms
+  Run 5/5 ... 68374 ms
+
+  Runs: 5
+  Times: [68930, 69232, 68859, 68935, 68374]
+  Average: 68866.00 ms
+  Min:     68374 ms
+  Max:     69232 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O0
+Solver         : gauss_jordan
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 88148 ms
+  Run 2/5 ... 89303 ms
+  Run 3/5 ... 88519 ms
+  Run 4/5 ... 89115 ms
+  Run 5/5 ... 88010 ms
+
+  Runs: 5
+  Times: [88148, 89303, 88519, 89115, 88010]
+  Average: 88619.00 ms
+  Min:     88010 ms
+  Max:     89303 ms
+
+
+############################################################
+# Compiler       : gcc
+# Optimization   : -O2
+# Extra flags    : -march=native
+############################################################
+
+Building: benchmark_build/linreg_gcc_O2
+Build successful.
+
+============================================================
+Compiler       : gcc
+Optimization   : -O2
+Solver         : gaussian
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 303 ms
+  Run 2/5 ... 302 ms
+  Run 3/5 ... 297 ms
+  Run 4/5 ... 303 ms
+  Run 5/5 ... 300 ms
+
+  Runs: 5
+  Times: [303, 302, 297, 303, 300]
+  Average: 301.00 ms
+  Min:     297 ms
+  Max:     303 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O2
+Solver         : gauss_jordan
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 299 ms
+  Run 2/5 ... 301 ms
+  Run 3/5 ... 301 ms
+  Run 4/5 ... 300 ms
+  Run 5/5 ... 302 ms
+
+  Runs: 5
+  Times: [299, 301, 301, 300, 302]
+  Average: 300.60 ms
+  Min:     299 ms
+  Max:     302 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O2
+Solver         : gaussian
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 25602 ms
+  Run 2/5 ... 26408 ms
+  Run 3/5 ... 27018 ms
+  Run 4/5 ... 26994 ms
+  Run 5/5 ... 25980 ms
+
+  Runs: 5
+  Times: [25602, 26408, 27018, 26994, 25980]
+  Average: 26400.40 ms
+  Min:     25602 ms
+  Max:     27018 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O2
+Solver         : gauss_jordan
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 25512 ms
+  Run 2/5 ... 25675 ms
+  Run 3/5 ... 25425 ms
+  Run 4/5 ... 25390 ms
+  Run 5/5 ... 25586 ms
+
+  Runs: 5
+  Times: [25512, 25675, 25425, 25390, 25586]
+  Average: 25517.60 ms
+  Min:     25390 ms
+  Max:     25675 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O2
+Solver         : gaussian
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 24131 ms
+  Run 2/5 ... 24255 ms
+  Run 3/5 ... 24230 ms
+  Run 4/5 ... 23966 ms
+  Run 5/5 ... 24283 ms
+
+  Runs: 5
+  Times: [24131, 24255, 24230, 23966, 24283]
+  Average: 24173.00 ms
+  Min:     23966 ms
+  Max:     24283 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O2
+Solver         : gauss_jordan
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 29980 ms
+  Run 2/5 ... 30277 ms
+  Run 3/5 ... 30222 ms
+  Run 4/5 ... 30107 ms
+  Run 5/5 ... 29795 ms
+
+  Runs: 5
+  Times: [29980, 30277, 30222, 30107, 29795]
+  Average: 30076.20 ms
+  Min:     29795 ms
+  Max:     30277 ms
+
+
+############################################################
+# Compiler       : gcc
+# Optimization   : -O3
+# Extra flags    : -march=native
+############################################################
+
+Building: benchmark_build/linreg_gcc_O3
+Build successful.
+
+============================================================
+Compiler       : gcc
+Optimization   : -O3
+Solver         : gaussian
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 305 ms
+  Run 2/5 ... 306 ms
+  Run 3/5 ... 306 ms
+  Run 4/5 ... 306 ms
+  Run 5/5 ... 305 ms
+
+  Runs: 5
+  Times: [305, 306, 306, 306, 305]
+  Average: 305.60 ms
+  Min:     305 ms
+  Max:     306 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O3
+Solver         : gauss_jordan
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 311 ms
+  Run 2/5 ... 310 ms
+  Run 3/5 ... 310 ms
+  Run 4/5 ... 310 ms
+  Run 5/5 ... 301 ms
+
+  Runs: 5
+  Times: [311, 310, 310, 310, 301]
+  Average: 308.40 ms
+  Min:     301 ms
+  Max:     311 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O3
+Solver         : gaussian
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 25254 ms
+  Run 2/5 ... 25547 ms
+  Run 3/5 ... 25314 ms
+  Run 4/5 ... 25927 ms
+  Run 5/5 ... 26106 ms
+
+  Runs: 5
+  Times: [25254, 25547, 25314, 25927, 26106]
+  Average: 25629.60 ms
+  Min:     25254 ms
+  Max:     26106 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O3
+Solver         : gauss_jordan
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 26018 ms
+  Run 2/5 ... 25503 ms
+  Run 3/5 ... 25295 ms
+  Run 4/5 ... 26188 ms
+  Run 5/5 ... 27022 ms
+
+  Runs: 5
+  Times: [26018, 25503, 25295, 26188, 27022]
+  Average: 26005.20 ms
+  Min:     25295 ms
+  Max:     27022 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O3
+Solver         : gaussian
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 23896 ms
+  Run 2/5 ... 23745 ms
+  Run 3/5 ... 23502 ms
+  Run 4/5 ... 23576 ms
+  Run 5/5 ... 23333 ms
+
+  Runs: 5
+  Times: [23896, 23745, 23502, 23576, 23333]
+  Average: 23610.40 ms
+  Min:     23333 ms
+  Max:     23896 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -O3
+Solver         : gauss_jordan
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 28265 ms
+  Run 2/5 ... 27494 ms
+  Run 3/5 ... 27770 ms
+  Run 4/5 ... 29056 ms
+  Run 5/5 ... 29440 ms
+
+  Runs: 5
+  Times: [28265, 27494, 27770, 29056, 29440]
+  Average: 28405.00 ms
+  Min:     27494 ms
+  Max:     29440 ms
+
+
+############################################################
+# Compiler       : gcc
+# Optimization   : -Ofast
+# Extra flags    : -march=native
+############################################################
+
+Building: benchmark_build/linreg_gcc_Ofast
+Build successful.
+
+============================================================
+Compiler       : gcc
+Optimization   : -Ofast
+Solver         : gaussian
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 307 ms
+  Run 2/5 ... 306 ms
+  Run 3/5 ... 313 ms
+  Run 4/5 ... 311 ms
+  Run 5/5 ... 312 ms
+
+  Runs: 5
+  Times: [307, 306, 313, 311, 312]
+  Average: 309.80 ms
+  Min:     306 ms
+  Max:     313 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -Ofast
+Solver         : gauss_jordan
+Configuration  : N=20000 p=50
+============================================================
+  Run 1/5 ... 315 ms
+  Run 2/5 ... 311 ms
+  Run 3/5 ... 315 ms
+  Run 4/5 ... 313 ms
+  Run 5/5 ... 315 ms
+
+  Runs: 5
+  Times: [315, 311, 315, 313, 315]
+  Average: 313.80 ms
+  Min:     311 ms
+  Max:     315 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -Ofast
+Solver         : gaussian
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 26520 ms
+  Run 2/5 ... 25879 ms
+  Run 3/5 ... 25893 ms
+  Run 4/5 ... 25686 ms
+  Run 5/5 ... 25486 ms
+
+  Runs: 5
+  Times: [26520, 25879, 25893, 25686, 25486]
+  Average: 25892.80 ms
+  Min:     25486 ms
+  Max:     26520 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -Ofast
+Solver         : gauss_jordan
+Configuration  : N=50000 p=300
+============================================================
+  Run 1/5 ... 25339 ms
+  Run 2/5 ... 25453 ms
+  Run 3/5 ... 25712 ms
+  Run 4/5 ... 25555 ms
+  Run 5/5 ... 25564 ms
+
+  Runs: 5
+  Times: [25339, 25453, 25712, 25555, 25564]
+  Average: 25524.60 ms
+  Min:     25339 ms
+  Max:     25712 ms
+
+
+============================================================
+Compiler       : gcc
+Optimization   : -Ofast
+Solver         : gaussian
+Configuration  : N=2000 p=2000
+============================================================
+  Run 1/5 ... 22740 ms
+  Run 2/5 ... 22763 ms
+  Run 3/5 ... 
